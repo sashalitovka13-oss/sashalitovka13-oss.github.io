@@ -1,0 +1,21 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1f7a65"/>
+      <stop offset="0.55" stop-color="#204c75"/>
+      <stop offset="1" stop-color="#d8a25f"/>
+    </linearGradient>
+    <linearGradient id="mist" x1="200" y1="100" x2="900" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="white" stop-opacity="0.03"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <circle cx="970" cy="145" r="70" fill="#fff" fill-opacity="0.15"/>
+  <ellipse cx="600" cy="230" rx="520" ry="180" fill="url(#mist)"/>
+  <path d="M0 520C107 485 182 430 278 401C388 367 497 430 588 393C692 350 756 266 842 276C981 292 1052 398 1200 370V800H0V520Z" fill="#16314A" fill-opacity="0.45"/>
+  <path d="M0 575C118 545 233 446 327 470C425 495 511 594 620 572C731 550 806 424 924 420C1026 416 1101 487 1200 470V800H0V575Z" fill="#0A2235" fill-opacity="0.66"/>
+  <path d="M0 646C145 620 240 565 341 566C435 567 489 650 583 654C707 659 785 554 907 552C1014 551 1112 622 1200 620V800H0V646Z" fill="#F7F6F2" fill-opacity="0.12"/>
+  <rect x="54" y="610" width="430" height="110" rx="28" fill="#081723" fill-opacity="0.28" stroke="white" stroke-opacity="0.18"/>
+  <text x="88" y="676" fill="white" font-size="44" font-family="Arial, sans-serif" font-weight="700">Панорама Закарпаття</text>
+</svg>
