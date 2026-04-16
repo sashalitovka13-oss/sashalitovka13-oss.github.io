@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Туристичне Закарпаття — Локації</title>
+  <meta name="description" content="Локації Закарпаття з фільтрацією та переходом на окремі сторінки." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-noise"></div>
+  <header class="site-header site-header--compact">
+    <div class="container header-row">
+      <a class="brand" href="index.html"><img src="assets/icons/logo-zakarpattia.svg" alt="Логотип" class="brand__logo" /><div><span class="brand__eyebrow" data-i18n="brandEyebrow">Інформаційний туристичний портал</span><strong class="brand__title" data-i18n="brandTitle">Туристичне Закарпаття</strong></div></a>
+      <div class="top-controls"><button class="control-btn" id="langToggle" type="button">EN</button><button class="control-btn" id="themeToggle" type="button"><span>◐</span><span data-i18n="themeBtn">Тема</span></button><button class="menu-btn" id="menuToggle" type="button"><span></span><span></span><span></span></button></div>
+    </div>
+    <div class="container nav-shell"><nav class="site-nav" id="siteNav"><a href="index.html" data-i18n="navHome">Головна</a><a href="locations.html" class="is-active" data-i18n="navLocations">Локації</a><a href="index.html#facts" data-i18n="navFacts">Цікаві факти</a><a href="index.html#map-section" data-i18n="navMap">Карта</a></nav></div>
+  </header>
+
+  <main>
+    <section class="inner-hero">
+      <div class="container inner-hero__wrap reveal">
+        <span class="section-badge" data-i18n="locationsBadge">Каталог локацій</span>
+        <h1 data-i18n="locationsTitle">Локації</h1>
+        <p data-i18n="locationsText">Оберіть район, тип місця або ключове слово, після чого відкрийте окрему сторінку з детальним описом.</p>
+      </div>
+    </section>
+
+    <section class="search-panel search-panel--inner reveal">
+      <div class="container">
+        <div class="filters">
+          <label><span data-i18n="districtLabel">Район</span><select id="districtFilter"><option value="all" data-i18n="allOption">Усі</option><option value="khust">Хустський</option><option value="mukachevo">Мукачівський</option><option value="uzhhorod">Ужгородський</option><option value="berehove">Берегівський</option></select></label>
+          <label><span data-i18n="typeLabel">Тип місця</span><select id="typeFilter"><option value="all" data-i18n="allOption2">Усі</option><option value="nature">Природа</option><option value="castle">Архітектура</option><option value="thermal">Термальний відпочинок</option><option value="city">Місто</option></select></label>
+          <label><span data-i18n="searchLabel">Ключове слово</span><input id="keywordFilter" type="text" placeholder="Синевир, замок, термали..."></label>
+        </div>
+      </div>
+    </section>
+
+    <section class="routes routes--inner">
+      <div class="container">
+        <div class="cards-grid" id="routesGrid">
+          <a class="route-card reveal" href="location-synevyr.html" data-district="khust" data-type="nature" data-search="синевир озеро парк природа міжгір'я">
+            <div class="route-card__media" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Synevyr%20Lake%20IMG%203125.jpg');"></div>
+            <div class="route-card__body"><div class="route-card__meta"><span>Хустський район</span><span data-i18n="natureTag">Природа</span></div><h3>Озеро Синевир</h3><p>Високогірне озеро та один з найвідоміших природних символів Закарпаття.</p></div>
+          </a>
+          <a class="route-card reveal reveal-delay-1" href="location-palanok.html" data-district="mukachevo" data-type="castle" data-search="паланок замок мукачево архітектура історія">
+            <div class="route-card__media" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Palanok.jpg');"></div>
+            <div class="route-card__body"><div class="route-card__meta"><span>Мукачівський район</span><span data-i18n="castleTag">Архітектура</span></div><h3>Замок Паланок</h3><p>Одна з головних історичних домінант Закарпаття та знакова екскурсійна локація.</p></div>
+          </a>
+          <a class="route-card reveal reveal-delay-2" href="location-berehove.html" data-district="berehove" data-type="thermal" data-search="берегово термали басейни відпочинок wellness косонь">
+            <div class="route-card__media" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Koson%200.jpg');"></div>
+            <div class="route-card__body"><div class="route-card__meta"><span>Берегівський район</span><span data-i18n="thermalTag">Термальний відпочинок</span></div><h3>Берегове та термальні комплекси</h3><p>Напрям для відновлення, спокійного відпочинку та коротких оздоровчих поїздок.</p></div>
+          </a>
+          <a class="route-card reveal" href="location-uzhhorod.html" data-district="uzhhorod" data-type="city" data-search="ужгород місто центр замок архітектура">
+            <div class="route-card__media" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Uzhhorod%20castle.jpg');"></div>
+            <div class="route-card__body"><div class="route-card__meta"><span>Ужгородський район</span><span data-i18n="cityTag">Місто</span></div><h3>Ужгород</h3><p>Історичний центр, набережні та один з найвідоміших замкових комплексів регіону.</p></div>
+          </a>
+          <a class="route-card reveal reveal-delay-1" href="location-nevytske.html" data-district="uzhhorod" data-type="castle" data-search="невицький замок ужгородщина руїни фортеця">
+            <div class="route-card__media" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/1/1d/Nevytske_Castle.jpg');"></div>
+            <div class="route-card__body"><div class="route-card__meta"><span>Ужгородський район</span><span data-i18n="castleTag">Архітектура</span></div><h3>Невицький замок</h3><p>Мальовничі руїни серед пагорбів поблизу Ужгорода, популярні для коротких виїздів та фотомаршрутів.</p></div>
+          </a>
+          <a class="route-card reveal reveal-delay-2" href="location-schonborn.html" data-district="mukachevo" data-type="castle" data-search="шенборн палац карпати санаторій архітектура чинадійово">
+            <div class="route-card__media" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/2/2f/Sch%C3%B6nborn_Palace%2C_Karpaty.jpg');"></div>
+            <div class="route-card__body"><div class="route-card__meta"><span>Мукачівський район</span><span data-i18n="castleTag">Архітектура</span></div><h3>Палац Шенборнів</h3><p>Неоромантичний палацовий комплекс з парком, озером і впізнаваним силуетом архітектури Закарпаття.</p></div>
+          </a>
+          <a class="route-card reveal" href="location-shipit.html" data-district="khust" data-type="nature" data-search="шипіт водоспад пилипець природа боржава">
+            <div class="route-card__media" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/8/86/Shypit_waterfall.jpg');"></div>
+            <div class="route-card__body"><div class="route-card__meta"><span>Хустський район</span><span data-i18n="natureTag">Природа</span></div><h3>Водоспад Шипіт</h3><p>Один із найвідоміших карпатських водоспадів, що добре поєднується з гірськими маршрутами та відпочинком у Пилипці.</p></div>
+          </a>
+        </div></div>
+        <p class="empty-state" id="emptyState" hidden data-i18n="emptyState">За заданими фільтрами локацій не знайдено.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><p data-i18n="footerText">Розробник не гарантує повну актуальність усіх матеріалів ресурсу та не несе відповідальності за наслідки їх практичного використання.</p></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

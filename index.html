@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Туристичне Закарпаття — Головна</title>
+  <meta name="description" content="Сучасний інформаційний сайт про туристичні локації Закарпаття." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="preloader" id="preloader"><div class="preloader__inner"><div class="preloader__mark"></div><p>Туристичне Закарпаття</p></div></div>
+  <div class="page-noise"></div>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html">
+        <img src="assets/icons/logo-zakarpattia.svg" alt="Логотип" class="brand__logo" />
+        <div>
+          <span class="brand__eyebrow" data-i18n="brandEyebrow">Інформаційний туристичний портал</span>
+          <strong class="brand__title" data-i18n="brandTitle">Туристичне Закарпаття</strong>
+        </div>
+      </a>
+      <div class="top-controls">
+        <button class="control-btn" id="langToggle" type="button">EN</button>
+        <button class="control-btn" id="themeToggle" type="button"><span>◐</span><span data-i18n="themeBtn">Тема</span></button>
+        <button class="menu-btn" id="menuToggle" type="button" aria-label="Меню"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="container nav-shell">
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html" class="is-active" data-i18n="navHome">Головна</a>
+        <a href="locations.html" data-i18n="navLocations">Локації</a>
+        <a href="index.html#facts" data-i18n="navFacts">Цікаві факти</a>
+        <a href="index.html#map-section" data-i18n="navMap">Карта</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero--split">
+      <div class="container hero-layout">
+        <div class="hero-copy reveal">
+          <span class="section-badge" data-i18n="heroBadge">Інформаційний сайт для подорожей Закарпаттям</span>
+          <h1 data-i18n="heroTitle">Відкрийте природні, історичні та оздоровчі локації регіону в новому сучасному форматі</h1>
+          
+          <div class="hero-actions">
+            <a href="locations.html" class="btn btn--primary" data-i18n="heroPrimary">Перейти до локацій</a>
+            <a href="#map-section" class="btn btn--ghost" data-i18n="heroSecondary">Відкрити карту</a>
+          </div>
+          <div class="hero-metrics">
+            <article><strong>7</strong><span data-i18n="stat1">ключові напрямки</span></article>
+            <article><strong>UA / EN</strong><span data-i18n="stat2">двомовний інтерфейс</span></article>
+            <article><strong>100%</strong><span data-i18n="stat3">адаптивний макет</span></article>
+          </div>
+        </div>
+
+        <div class="hero-gallery reveal reveal-delay-1">
+          <a class="gallery-card gallery-card--large" href="location-synevyr.html" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Synevyr%20lake%201.jpg');">
+            <div class="gallery-card__content">
+              <span data-i18n="galleryLabel1">Панорама Закарпаття</span>
+              <strong data-i18n="galleryTitle1">Гірські маршрути та природні перлини</strong>
+            </div>
+          </a>
+          <div class="gallery-stack">
+            <a class="gallery-chip" href="location-synevyr.html">Synevyr</a>
+            <a class="gallery-chip" href="location-palanok.html">Palanok</a>
+            <a class="gallery-chip" href="location-nevytske.html">Nevytske</a>
+            <a class="gallery-chip" href="location-shipit.html">Shypit</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section scenic-band">
+      <div class="container scenic-grid">
+        <div class="scenic-card reveal" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Palanok.jpg');">
+          <div class="scenic-card__overlay"><span data-i18n="spot1Label">Мукачево</span><strong data-i18n="spot1Title">Замок Паланок</strong></div>
+        </div>
+        <div class="scenic-card reveal reveal-delay-1" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Uzhhorod%20castle.jpg');">
+          <div class="scenic-card__overlay"><span data-i18n="spot2Label">Ужгород</span><strong data-i18n="spot2Title">Старе місто і фортеця</strong></div>
+        </div>
+        <div class="scenic-card reveal reveal-delay-2" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Koson%200.jpg');">
+          <div class="scenic-card__overlay"><span data-i18n="spot3Label">Берегівщина</span><strong data-i18n="spot3Title">Термальний відпочинок</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="facts section" id="facts">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="section-badge" data-i18n="factsBadge">Цікаві факти</span><h2 data-i18n="factsTitle">Що формує туристичну привабливість Закарпаття</h2></div>
+        </div>
+        <div class="facts-grid">
+          <article class="fact-card reveal"><strong>01</strong><p data-i18n="fact1">Закарпаття поєднує гірські маршрути, середньовічні замки, термальні комплекси та міські екскурсійні локації.</p></article>
+          <article class="fact-card reveal reveal-delay-1"><strong>02</strong><p data-i18n="fact2">Регіон зручний для коротких поїздок на 1–3 дні, що робить його популярним для інформаційних туристичних сервісів.</p></article>
+          <article class="fact-card reveal reveal-delay-2"><strong>03</strong><p data-i18n="fact3">Поєднання природних і архітектурних об’єктів дозволяє створювати різні сценарії подорожі для різних категорій користувачів.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section section" id="map-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="section-badge" data-i18n="mapBadge">Інтерактивна карта</span><h2 data-i18n="mapTitle">Основні об’єкти на карті Закарпаття</h2></div>
+          
+        </div>
+        <div class="map-shell reveal reveal-delay-1"><div id="mainMap"></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p data-i18n="footerText">Розробник не гарантує повну актуальність усіх матеріалів ресурсу та не несе відповідальності за наслідки їх практичного використання.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>
